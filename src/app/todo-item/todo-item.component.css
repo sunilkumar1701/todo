@@ -1,0 +1,5 @@
+/* Apply strikethrough for completed tasks */
+.text-decoration-line-through {
+    text-decoration: line-through;
+  }
+  

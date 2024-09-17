@@ -1,0 +1,15 @@
+<div class="d-flex align-items-center justify-content-between">
+    <div>
+      <input 
+        type="checkbox" 
+        [checked]="todo.completed" 
+        (change)="onToggle()" 
+        class="mr-2"
+      />
+      <span [ngClass]="{'text-muted': todo.completed, 'text-decoration-line-through': todo.completed}">
+        {{ todo.title }}
+      </span>
+    </div>
+    <button class="btn btn-danger btn-sm" (click)="onRemove()">Remove</button>
+  </div>
+  

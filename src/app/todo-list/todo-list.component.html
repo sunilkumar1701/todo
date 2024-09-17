@@ -1,0 +1,19 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">To-Do List</h2>
+    <div class="d-flex mb-3">
+      <input class="form-control mr-2" [(ngModel)]="newTodo" placeholder="Add new todo" />
+      <button class="btn btn-primary" (click)="addTodo()">Add</button>
+    </div>
+    <div class="list-group">
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let todo of todos; let i = index" class="list-group-item">
+          <app-todo-item 
+            [todo]="todo" 
+            (toggle)="toggleCompletion(i)" 
+            (remove)="removeTodo(i)">
+          </app-todo-item>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
